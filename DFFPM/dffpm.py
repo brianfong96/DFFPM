@@ -19,7 +19,6 @@ class dffpm():
         self.root_dir = self.get_path_to(root_dir)
         self.rel_to_abs = dict()
         self.populate_list_of_dirs(list_of_dirs)
-        print(self.rel_to_abs)
         return
 
     def populate_list_of_dirs(self, list_of_dirs):
@@ -55,9 +54,6 @@ class dffpm():
             return ret_path
         else:
             raise dffpm_ex(3, d)
-
-
-
 
 class dffpm_ex(Exception):
     def __init__(self, err_code, extra=None):
